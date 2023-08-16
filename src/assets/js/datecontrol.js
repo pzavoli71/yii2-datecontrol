@@ -65,7 +65,7 @@
                         vDispDate = vFormatter.parseDate($el[0].defaultValue, vDispFormat);                        
                         $el.val($el[0].defaultValue);
                         var vSaveValue = vFormatter.formatDate(vDispDate, vSaveFormat);
-                        $idSave.val(vSaveValue); //.trigger('change');                         
+                        $idSave.val($el.val()); //.trigger('change');                         
                         //vDispDate = $el[0].defaultValue;
                         //$el.val(vDispDate);
                         //$idSave.val(vDispDate); //.trigger('change');
