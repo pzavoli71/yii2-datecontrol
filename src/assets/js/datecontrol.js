@@ -62,10 +62,10 @@
                 if (isEmpty(vUrl)) {
                     var vDispDate = vFormatter.parseDate($el.val(), vDispFormat);
                     if (vDispDate === false || vDispDate === null || String(vDispDate).length === 0) {
-                      vDispDate = vFormatter.parseDate($el[0].defaultValue, vDispFormat);                        
-                        $el.val(vDispDate);
+                        vDispDate = vFormatter.parseDate($el[0].defaultValue, vDispFormat);                        
+                        $el.val($el[0].defaultValue);
                         vSaveValue = vFormatter.formatDate(vDispDate, vSaveFormat);
-                        $idSave.val(vSaveValue); //.trigger('change');                        
+                        $idSave.val(vSaveValue); //.trigger('change');                         
                         //vDispDate = $el[0].defaultValue;
                         //$el.val(vDispDate);
                         //$idSave.val(vDispDate); //.trigger('change');
