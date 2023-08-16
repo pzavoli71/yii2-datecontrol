@@ -22,6 +22,7 @@
 
 </div>
 
+New version, without guessdate. When the date format is not compliant, the input field won't be updated.
 The **Date Control** module allows controlling date formats of attributes separately for View and Model for Yii Framework 2.0. It thus allows an easy way to work with dates when displaying to users in one way (format / timezone) but saving it in the database in another way (format / timezone).
 
 > Refer [CHANGE LOG](https://github.com/kartik-v/yii2-datecontrol/blob/master/CHANGE.md) for details on changes to various releases.
