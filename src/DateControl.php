@@ -193,9 +193,17 @@ class DateControl extends InputWidget
             $format = '!' . $format;
         }
         if ($timezone != null) {
-            $timestamp = DateTime::createFromFormat($format, $source, new DateTimeZone($timezone));
+            if ( $source && $source instanceof DateTime)
+                $timestamp = $source;
+            else    
+                $timestamp = DateTime::createFromFormat($format, $source, new DateTimeZone($timezone));
+            //$timestamp = DateTime::createFromFormat($format, $source, new DateTimeZone($timezone));
         } else {
-            $timestamp = DateTime::createFromFormat($format, $source);
+            if ( $source && $source instanceof DateTime)
+                $timestamp = $source;
+            else    
+                $timestamp = DateTime::createFromFormat($format, $source);
+            //$timestamp = DateTime::createFromFormat($format, $source);
         }
         return $timestamp;
     }
