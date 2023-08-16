@@ -343,6 +343,8 @@ class DateControl extends InputWidget
                 $value = $this->translateDate($value, $this->displayFormat);
             }
             return $value;
+        } else {
+            return $data;
         }
         return null;
     }
