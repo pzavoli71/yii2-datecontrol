@@ -62,13 +62,10 @@
                 if (isEmpty(vUrl)) {
                     var vDispDate = vFormatter.parseDate($el.val(), vDispFormat);
                     if (vDispDate === false || vDispDate === null || String(vDispDate).length === 0) {
-                        vDispDate = vFormatter.parseDate($el[0].defaultValue, vDispFormat);                        
-                        $el.val($el[0].defaultValue);
-                        var vSaveValue = vFormatter.formatDate(vDispDate, vSaveFormat);
-                        $idSave.val($el.val()); //.trigger('change');                         
-                        //vDispDate = $el[0].defaultValue;
-                        //$el.val(vDispDate);
-                        //$idSave.val(vDispDate); //.trigger('change');
+                        //vDispDate = vFormatter.parseDate($el[0].defaultValue, vDispFormat);                        
+                        //$el.val($el[0].defaultValue);
+                        //var vSaveValue = vFormatter.formatDate(vDispDate, vSaveFormat);
+                        $idSave.val('0000-00-00'); //.trigger('change');                         
                         self.isChanged = false;   
                         return;
                         //vDispDate = vFormatter.guessDate($el.val(), vDispFormat);
